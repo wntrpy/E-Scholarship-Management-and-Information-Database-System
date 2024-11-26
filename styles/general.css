@@ -17,9 +17,11 @@ span{
 
 body {
   background-color: var(--bg);
+  overflow-x: hidden;
 }
 
-button{
+button,
+input[type="submit"]{
   cursor: pointer;
 }
 
@@ -31,20 +33,30 @@ select {
   outline: none;
 }
 
+
+
 :root {
   /* Colors */
   --green: #2D582A;
   --placeHolder: #A19898;
   --bg: #E8E8E8;
   --yellow: #EDE7BB;
-  --blue: #032447;
+  --blue: #041473;
   --gray: #545454;
   --input-text-color: #f3f4f6;
+  --light-blue: #007CFF;
+  --home-page-nav-card: #F1E9E9;
+  --text-color: #968F8F;
 
   /*states*/
   --button-active-state: #D9D9D9;
   --button-hover-scale: scale(1.05);
   --nav-hover-active-state: rgba(217, 217, 217, 0.21);
+  --textfield-active-state-color: #4caf50;
+  --textfield-active-state-shadow: 0 0 5px #4caf50;
+  
+  /*transitions*/
+  --textfield-active-state-transition: border-color 0.3s, box-shadow 0.3s;
 
   /* Shadow */
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -65,9 +77,12 @@ select {
 .category-card button,
 .category-card-large button,
 .application-available-container button,
-#application-form-next-button,
+.application-form-next-button,
 .choose-file-button,
-.replace-file-button {
+.personal-info-form-footer a:not(.application-form-back-button),
+.replace-file-button,
+.announcement-popup-button
+{
   background-color: var(--green);
   border: none;
   color: white;
@@ -76,6 +91,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 /***************************************************************************************************************/
@@ -91,7 +107,6 @@ select {
 .category-card button:hover,
 .category-card-large button:hover,
 .application-available-container button:hover,
-#application-form-next-button:hover,
 #proceed-button:hover {
   transition: 0.5s all ease-in-out;
   background-color: var(--green);
@@ -105,8 +120,10 @@ select {
 .back-button-register,
 #my-profile-back-button,
 .change-pass-back-button,
-#application-form-back-button,
-.application-file-status {
+.application-form-back-button,
+.application-file-status,
+.announcement-popup-close-btn
+{
   border: var(--green) 3px solid;
   display: flex;
   align-items: center;
@@ -116,7 +133,12 @@ select {
   font-size: 1rem;
   color: black;
   font-weight: 600;
+  border-radius: 20px;
 }
+/*
+  justify-content: space-between;
+  padding: 0 1rem;
+*/
 
 
 /***************************************************************************************************************/
@@ -141,11 +163,38 @@ fieldset input,
 /***** ALL DROPDOWN ************************************************************************************/
 /***************************************************************************************************************/
 #grade-level,
-#category-dropdown {
+#category-dropdown
+{
   background-color: var(--input-text-color);
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 10px;
 }
 
-/*LAHAT ELEMENTS NA MAY SAME STYLE DITO ILALAGAY KESA PAULIT ULIT KADA PAGES*/
+
+/***************************************************************************************************************/
+/***** ALL PAGES WITH BG PICTURE *******************************************************************************/
+/***************************************************************************************************************/
+#programs-content-container,
+#staff-announcement-container
+{
+  width: 105rem;
+  height: 55rem;
+  background: url("/sad-final-project/sad-final-project/img/category-bg.png") no-repeat center center;
+  background-size: cover;
+  margin-left: 235px;
+}
+
+
+
+/*OVERLAY*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}

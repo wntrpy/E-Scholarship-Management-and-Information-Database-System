@@ -1,0 +1,109 @@
+body {
+  overflow-x: hidden;
+}
+
+#feedback-container {
+  width: 105rem;
+  height: 55rem;
+  background: url("/sad-final-project/sad-final-project/img/category-bg.png") no-repeat center center;
+  background-size: cover;
+  margin-left: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#feedback-form {
+  width: 1263px;
+  height: 746px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: var(--inner-shadow);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#feedback-form h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+#feedback-form p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 900px;
+}
+
+.form-group {
+  width: 80%;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group select{
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+.form-buttons {
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+   justify-content: end;
+   gap: 2rem;
+}
+
+.back-button, 
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.submit-button {
+  background-color: var(--green);
+  color: #fff;
+}
+
+.back-button:hover {
+  background-color: #d6d6d6;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}

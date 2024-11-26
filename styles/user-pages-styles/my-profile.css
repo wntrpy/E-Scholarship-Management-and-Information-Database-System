@@ -148,7 +148,7 @@ fieldset input{
   font-size: 1.5rem;
   justify-content: space-between;
   position: fixed;
-  bottom: 200px;
+  bottom: 120px;
   left: 260px;
   right: 100px;
 }
@@ -215,10 +215,14 @@ fieldset input{
 }
 
 /*BUTTONS(CHANGE PASS[BACK, SUBMIT])*/
-.button-container{
-  margin-top: 20px;
-  margin-left: 43%;
+.photoUpload{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
+
+
 
 .change-pass-back-button, .change-pass-submit-button{
   border-radius: 120px;
@@ -270,6 +274,12 @@ fieldset input{
 }
 
 #choose-photo-btn{
+  border-radius: 120px;
+  width: 146.656px;
+  height:  46.6562px;
+}
+
+#upload-photo-btn{
   border-radius: 120px;
   width: 146.656px;
   height:  46.6562px;

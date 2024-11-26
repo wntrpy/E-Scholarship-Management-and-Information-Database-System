@@ -2,12 +2,12 @@
   display: flex;
   padding: 0 10px;
   justify-content: right;
-
 } 
 
 .calendar-container {
   background: #fff;
   width: 450px;
+  height: 403px;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
 }
@@ -103,7 +103,7 @@
 }
 
 .calendar-dates li.active::before {
-  background: #6332c5;
+  background: var(--blue);
 }
 
 .calendar-dates li:not(.active):hover::before {
